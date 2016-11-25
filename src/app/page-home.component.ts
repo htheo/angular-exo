@@ -1,4 +1,4 @@
-import {Component, Output, EventEmitter} from '@angular/core';
+import {Component, Output, EventEmitter, OnInit} from '@angular/core';
 import {Item} from "./item";
 import {HttpService} from "./http.service";
 
@@ -9,7 +9,7 @@ import {HttpService} from "./http.service";
     providers:[HttpService]
 
 })
-export class PageHomeComponent {
+export class PageHomeComponent implements OnInit{
 
   item1 = new Item('Isabella', 'Description', 'assets/chevre1.jpg', 1);
   item2 = new Item('Francesca', 'Description', 'assets/chevre2.jpg', 2);
@@ -28,8 +28,8 @@ export class PageHomeComponent {
             );
     }
 
-    onSubmit(username:string,email:string, img:string){
-        this.httpservice.sendData({username:username,email:email, img:img})
+    onSubmit(name:string,desc:string, img:string){
+        this.httpservice.sendData({name:name,desc:desc, img:img})
             .subscribe(
                 (data:any) => console.log(data)
             );

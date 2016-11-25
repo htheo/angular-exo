@@ -1,7 +1,12 @@
 <div class="form">
     <input #nom placeholder="Votre nom" />
     <input #prenom placeholder="Votre prenom" />
-    <button (click)="onDetectEvent(nom.value,prenom.value)">Envoyer</button>
+    <button (click)="onDetectEvent(prenom.value,nom.value)">Envoyer</button>
+    <button (click)="onGetusers()">Voir tous les utilisateurs</button>
+    <ul>
+        <li *ngFor="let user of users">{{user.username}} {{user.name}}</li>
+        <li>{{vardetectevent}}</li>
+    </ul>
 </div>
-{{vardetectevent}}
-{{param}}
+
+
