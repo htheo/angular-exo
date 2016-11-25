@@ -9,3 +9,23 @@
   Afficher ce qu'on a saisi
 
 </p>
+<div class="container">
+
+  <div class="demo-card-image mdl-card mdl-shadow--2dp">
+    <a [routerLink]="['/item', item1.id]" ><img class="img" src="{{ item1.img }}" alt="{{ item1.name }}"></a>
+    <div class="mdl-card__title mdl-card--expand">
+    </div>
+    <div class="mdl-card__actions">
+      <span class="demo-card-image__filename title">{{ item1.name }} <strong>{{ item1.descr }}</strong></span>
+    </div>
+  </div>
+  <div class="demo-card-image mdl-card mdl-shadow--2dp">
+    <a [routerLink]="['/item', item2.id]" ><img class="img" src="{{ item2.img }}" alt="{{ item2.name }}"></a>
+    <div class="mdl-card__title mdl-card--expand">
+    </div>
+    <div class="mdl-card__actions">
+      <span class="demo-card-image__filename title">{{ item2.name }} <strong>{{ item2.descr }}</strong></span>
+    </div>
+  </div>
+
+</div>

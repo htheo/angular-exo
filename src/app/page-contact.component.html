@@ -1,4 +1,7 @@
-<input #nom placeholder="Votre nom" />
-<input #prenom placeholder="Votre prenom" />
-<button (click)="onDetectEvent(nom.value,prenom.value)">Envoyer</button>
+<div class="form">
+    <input #nom placeholder="Votre nom" />
+    <input #prenom placeholder="Votre prenom" />
+    <button (click)="onDetectEvent(nom.value,prenom.value)">Envoyer</button>
+</div>
 {{vardetectevent}}
+{{param}}
