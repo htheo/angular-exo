@@ -34,3 +34,6 @@ img {
 .form {
     padding: 5%;
 }
+select {
+    display: block;
+}
