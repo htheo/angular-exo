@@ -24,7 +24,13 @@ export class PageHomeComponent implements OnInit{
     ngOnInit(){
         this.httpservice.getData()
             .subscribe(
-                (data:any) => console.log(data)
+                data => {
+                    const array = [];
+                    for(let key in data){
+                        array.push(data[key]);
+                    }
+                    this.items=array;
+                }
             );
     }
 

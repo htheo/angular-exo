@@ -1,36 +1,25 @@
-
 <div class="container">
-
-  <div class="demo-card-image mdl-card mdl-shadow--2dp">
-    <a [routerLink]="['/item', item1.id]" ><img class="img" src="{{ item1.img }}" alt="{{ item1.name }}"></a>
+  <div class="demo-card-image mdl-card mdl-shadow--2dp" *ngFor="let item of items">
+    <a [routerLink]="['/item', item]" ><img class="img" src="{{ item.img }}" alt="{{ item.name }}"></a>
     <div class="mdl-card__title mdl-card--expand">
     </div>
     <div class="mdl-card__actions">
-      <span class="demo-card-image__filename title">{{ item1.name }} <strong>{{ item1.descr }}</strong></span>
+      <span class="demo-card-image__filename title">{{ item.name }} <strong>{{ item.desc }}</strong></span>
     </div>
   </div>
-  <div class="demo-card-image mdl-card mdl-shadow--2dp">
-    <a [routerLink]="['/item', item2.id]" ><img class="img" src="{{ item2.img }}" alt="{{ item2.name }}"></a>
-    <div class="mdl-card__title mdl-card--expand">
-    </div>
-    <div class="mdl-card__actions">
-      <span class="demo-card-image__filename title">{{ item2.name }} <strong>{{ item2.descr }}</strong></span>
-    </div>
-  </div>
-
-</div>
 <div class="form">
   <label for="name">Nom de la chèvre</label>
   <input type="text" id="name" #name>
   <label for="description">Description</label>
   <input type="text" id="description" #description>
-
+    <label for="img">Image</label>
   <select  name="img" id="img" #img>
     <option value="assets/chevre1.jpg">Swag</option>
     <option value="assets/chevre2.jpg">Petite chèvre pas contente</option>
     <option value="assets/chevre3.jpeg">Chèvre de qualité</option>
     <option value="assets/chevre4.jpg">La reine des neiges</option>
   </select>
-  <button (click)="onSubmit(name.value, description.value, img.value)">Submit</button>
+  <button (click)="onSubmit(name.value, description.value, img.value)" class="waves-effect waves-light btn" style="margin-top: 2em">Submit</button>
 
+</div>
 </div>

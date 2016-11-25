@@ -1,12 +1,14 @@
-<div class="form">
-    <input #nom placeholder="Votre nom" />
-    <input #prenom placeholder="Votre prenom" />
-    <button (click)="onDetectEvent(prenom.value,nom.value)">Envoyer</button>
-    <button (click)="onGetusers()">Voir tous les utilisateurs</button>
-    <ul>
-        <li *ngFor="let user of users">{{user.username}} {{user.name}}</li>
-        <li>{{vardetectevent}}</li>
-    </ul>
+<div class="container">
+    <div class="form">
+        <input #nom placeholder="Votre nom" />
+        <input #prenom placeholder="Votre prenom" />
+        <button (click)="onDetectEvent(prenom.value,nom.value)" class="waves-effect waves-light btn">Envoyer</button>
+        <button (click)="onGetusers()" class="waves-effect waves-light btn">Voir tous les utilisateurs</button>
+        <ul>
+            <li *ngFor="let user of users">{{user.username}} {{user.name}}</li>
+            <li>{{vardetectevent}}</li>
+        </ul>
+    </div>
 </div>
 
 
